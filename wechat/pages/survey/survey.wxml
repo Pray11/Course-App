@@ -1,0 +1,37 @@
+<!--pages/survey/survey.wxml-->
+<view class="container">
+  <text class="header">Year of College</text>
+  <label wx:for="{{yearOfCollege}}" class="radioGroup">
+    <radio value="{{item}}"/>{{item}}
+  </label>
+  
+  <text class="header">You Are a:</text>
+  <radio-group class="radioGroup">
+    <label wx:for="{{gender}}">
+      <radio value="{{item}}"/>{{item}}
+    </label>
+  </radio-group>
+
+  <text class="header">Your Major is:</text>
+  <input type="text" class="inputBox"/>
+
+  <text class="header">Personal interest</text>
+  <input type="text" class="inputBox"/>
+
+  <text class="header">What you want to do after graduation</text>
+  <input type="text" class="inputBox"/>
+
+  <text class="header">Recent Readings</text>
+  <view class="inlineInputView">
+    <text>Book 1</text>
+    <input type="text" placeholder='book 1' class="inlineInput"/>
+  </view>
+  <view class="inlineInputView">
+    <text>Book 2</text>
+    <input type="text" placeholder='book 2' class="inlineInput"/>
+  </view>
+
+  <text class="header">Recent Movie</text>
+  <input type="text" class="inputBox"/>
+  <button bindtap='submitButton'> Submit </button>
+</view>
