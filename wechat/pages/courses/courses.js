@@ -49,7 +49,6 @@ Page({
     if (!(index===0 && this.data.starScore_dialog===1)) {
       for (let i = 0; i <= index; i++)
         this.data.starsArr_dialog[i] = 2;
-
       index += 1
     }
 
