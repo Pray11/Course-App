@@ -19,7 +19,7 @@ Page({
     if (currentStatu == "close") {
       this.data.courses[this.data.currentIndex].starScore = this.data.starScore_dialog;
       this.data.courses[this.data.currentIndex].starsArr = this.data.starsArr_dialog;
-
+    
       this.setData({
         isDialogShow: false,
         courses : this.data.courses
@@ -32,8 +32,8 @@ Page({
 
       this.setData({
         isDialogShow: true,
-        starsArr_dialog: [0,0,0,0,0],
-        starScore:0, 
+        starsArr_dialog: this.data.courses[this.data.currentIndex].starsArr,
+        starScore_dialog: this.data.courses[this.data.currentIndex].starsScore,
         currentIndex : currentIndex
       });
     }
@@ -41,8 +41,10 @@ Page({
 
   ratingCourse: function (e) {
     var index = parseInt(e.currentTarget.dataset.index);
+
     for (let i = 0; i < 5; i++)
       this.data.starsArr_dialog[i] = 0;
+
     if (!(index===0 && this.data.starScore_dialog===1)) {
       for (let i = 0; i <= index; i++)
         this.data.starsArr_dialog[i] = 2;

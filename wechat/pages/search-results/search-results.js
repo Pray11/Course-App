@@ -8,6 +8,14 @@ Page({
   
   },
 
+  goToCourse: function(e) {
+    console.log('Going to: ' + e.target.id);
+    var courseId = e.target.id.substring(6);
+    wx.navigateTo({
+      url: '../course-info/course-info?courseId=' + courseId,
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
