@@ -3,8 +3,10 @@
     "pages/index/index",
     "pages/survey/survey",
     "pages/search-results/search-results",
-    "pages/logs/logs",
-    "pages/courses/courses"
+    "pages/courses/courses",
+    "pages/course-info/course-info",
+    "pages/logs/logs"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
