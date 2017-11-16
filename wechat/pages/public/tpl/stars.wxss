@@ -1,0 +1,22 @@
+.rankcontauber{
+  display: flex;
+  flex-direction: row;
+}
+.rankstars{
+  display: flex;
+  flex-direction: row;
+  height: 40rpx;
+  margin-right: 6rpx;
+  margin-top: 12rpx;
+}
+.rankstars image{
+  padding-left: 3rpx;
+  height: 40rpx;
+  width: 40rpx;
+}
+.rankscore{
+  color: #4A6141;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  font-size: 14px;
+}

@@ -1,0 +1,72 @@
+@import "../public/tpl/stars.wxss";
+
+/* pages/courses/courses.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  padding: 55rpx 0;
+  box-sizing: border-box;
+} 
+
+.content_container {
+  height: 100%;
+  display: flex;
+  margin-bottom: 40rpx;
+  margin-left: 20rpx;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ratingDialog {
+  width: 80%;
+  height: 25%;  
+  position: fixed; 
+  top: 15%;
+  left: 10%;
+  z-index: 1000;  
+  background: #FAFAFA;
+  border-radius: 3px;
+  overflow-y: scroll;
+}
+
+.dialogMarsk {  
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 1000;  
+  background: rgba(0, 0, 0, 0.6);
+  overflow: hidden;  
+}
+
+.rankcontauber_dialog{ 
+  position: fixed;
+  top:22.5%;
+  left:25%;
+  display: flex;
+  flex-direction: row;
+}
+.rankstars_dialog{
+  display: flex;
+  flex-direction: row;
+  height: 60rpx;
+  margin-right: 6rpx;
+  margin-top: 12rpx;
+}
+.rankstars_dialog image{
+  padding-left: 3rpx;
+  height: 60rpx;
+  width: 60rpx;
+}
+.rankscore_dialog{
+  color: #4A6141;
+  margin-top: 10rpx;
+  font-size: 20px;
+}
