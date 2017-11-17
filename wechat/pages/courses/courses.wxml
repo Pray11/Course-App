@@ -1,0 +1,26 @@
+<!--pages/courses/courses.wxml-->
+<!--text>pages/courses/courses.wxml</text-->
+<import src="../public/tpl/stars.wxml" />
+
+<view class="container" wx:for="{{courses}}" wx:for-item="course_item" >
+  <view class="content_container">
+    {{course_item.name}}
+  </view>
+  <view data-index="{{index}}" bindtap="showRatingDialog" data-statu="open">
+    <template is="starsTpl" data="{{starsArr:course_item.starsArr, starScore:course_item.starScore}}"></template>
+  </view>
+</view>
+  
+<view class="dialogMarsk" bindtap="showRatingDialog" data-statu="close" wx:if="{{isDialogShow}}"></view>  
+<view class="ratingDialog" wx:if="{{isDialogShow}}">
+  <view class="rankcontauber_dialog">
+      <view class="rankstars_dialog">
+        <block wx:for="{{starsArr_dialog}}" wx:for-item="item">
+            <image wx:if="{{item === 0}}" src="/images/stargray.png" bindtap="ratingCourse" data-index="{{index}}"></image>
+            <image wx:elif="{{item === 1}}" src="/images/starmedium.png" bindtap="ratingCourse" data-index="{{index}}"></image>
+            <image wx:else="{{item === 2}}" src="/images/starfull.png" bindtap="ratingCourse" data-index="{{index}}"></image>
+        </block>  
+        </view>
+        <text class="rankscore_dialog">{{starScore_dialog}}</text>
+    </view>
+</view>

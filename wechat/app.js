@@ -35,9 +35,11 @@ App({
   },
   globalData: {
     userInfo: null,
+
     courses:[{id: '1', name: 'course1', rating: 4, description: 'this is good course'},
       {id: '2', name: 'course2', rating: 3, description: 'this is a bad course'},
       {id: '3', name: 'course3', rating: 1, description: 'barely learnable'}],
+
     liked: []
   }
 })

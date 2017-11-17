@@ -2,3 +2,7 @@
 <view class="container">
   <button bindtap='surveyButton'> Survey </button>
 </view>
+
+<view class="container">
+  <button bindtap='coursesButton'> Courses </button>
+</view>
