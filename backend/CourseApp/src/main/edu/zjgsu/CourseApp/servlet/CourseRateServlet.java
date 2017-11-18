@@ -74,13 +74,25 @@ public class CourseRateServlet extends HttpServlet {
 	    String courseId = request.getParameter("courseid");
 	    String studentId = request.getParameter("studentid");
 	    String rate = request.getParameter("rate");
+	    String type = request.getParameter("type");
 		
-		int changedLines = sacService.insertCourseRate(courseId, studentId, rate);
-		if (changedLines!=0) {
-			out.println("插入/修改成功 affected rows:" + changedLines);
-		} else {
-			out.println("oooooooah wrong!");
-		}
+	    if (type.equals("insert")) {
+			int changedLines = sacService.insertCourseRate(courseId, studentId, rate);
+			if (changedLines!=0) {
+				out.println("插入成功 affected rows:" + changedLines);
+			} else {
+				out.println("oooooooah wrong!");
+			}
+	    } else if (type.equals("update")) {
+			int changedLines = sacService.insertCourseRate(courseId, studentId, rate);
+			if (changedLines!=0) {
+				out.println("更新成功 affected rows:" + changedLines);
+			} else {
+				out.println("oooooooah wrong!");
+			}
+	    } else {
+	    	out.println("oooooooah wrong!");
+	    }
 		
 	}
 

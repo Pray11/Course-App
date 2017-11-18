@@ -37,6 +37,13 @@ public class SACServiceImpl implements SACService{
 	@Override
 	public int insertCourseRate(String courseId, String studentId, String rate) {
 		// TODO Auto-generated method stub
+		String sql = "update student_attended_courses SET rate="+rate+" where (student_id="+studentId+" and course_id="+courseId+");";
+		
+		return baseDao.update(sql, null);
+	}
+
+	@Override
+	public int updateCourseRate(String courseId, String studentId, String rate) {
 		String sql = "insert into student_attended_courses (course_id, student_id, rate) value ("+courseId+", "+studentId+", "+rate+")";   
 		
 		return baseDao.update(sql, null);
