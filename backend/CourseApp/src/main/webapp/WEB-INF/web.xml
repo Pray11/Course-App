@@ -1,20 +1,13 @@
-
-
-<web-app id = "WebApp_ID" version = "2.4"
-   xmlns = "http://java.sun.com/xml/ns/j2ee" 
-   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation = "http://java.sun.com/xml/ns/j2ee 
-   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-  
-  <description>
-  	A web application for better course management.
-  </description>
-  
-  <context-param>
-  	<param-name>webmaster</param-name>
-  	<param-value>puzhenq@qq.com</param-value>
-  </context-param>
-  
-  
-
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<description>
+		A web application for better course management.
+	</description>
+	<context-param>
+		<param-name>webmaster</param-name>
+		<param-value>puzhenq@qq.com</param-value>
+	</context-param>
 </web-app>

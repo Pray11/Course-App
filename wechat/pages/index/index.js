@@ -56,5 +56,11 @@ Page({
     wx.navigateTo({
       url: '../survey/survey'
     })
+  },
+  coursesButton: function(e){
+    console.log('navigating to survey page');
+    wx.navigateTo({
+      url: '../courses/courses'
+    })
   }
 })
