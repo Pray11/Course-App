@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="CourseApp">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/target/CourseApp-0.0.1-SNAPSHOT"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <property name="context-root" value="CourseApp"/>
+        <property name="java-output-path" value="/CourseApp/target/classes"/>
+    </wb-module>
+</project-modules>
