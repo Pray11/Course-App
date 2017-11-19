@@ -1,0 +1,18 @@
+user story 14, favourites
+Where to show the favourites
+I'd love to have a link on every page so that a user can easily go to his favourite page
+
+Before that, let's just make one fake favourite page.
+
+data in app.js
+render them in favourite.wxml
+
+yeah, this is non-trivial programming.
+
+matching can be digital analysis without visualization
+
+it is all about how favourite page renders the data
+
+1. define the dimension of the time table area
+2. draw index on them(Tuesday, Thursday, 6,7,8-11)
+3. draw big X on the taken time slot

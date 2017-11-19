@@ -5,6 +5,7 @@
     "pages/search-results/search-results",
     "pages/courses/courses",
     "pages/course-info/course-info",
+    "pages/favourite/favourite",
     "pages/logs/logs"
 
   ],
