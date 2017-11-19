@@ -50,9 +50,10 @@ public class CourseRateServlet extends HttpServlet {
 	    			out.println(sacRs.get(i).getCourse_id());
 	    			out.println(sacRs.get(i).getRate());
 	    		}*/
-	    		out.println("RATE");
+	    		//out.println("RATE");
+	    		out.println(sacRs.get(0).getRate());
 	    	} else {
-	    		out.println("RATE");
+	    		out.println("oooooah wrong");
 	    	}
 		    
 	    } catch (Exception e) {

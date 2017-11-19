@@ -40,7 +40,7 @@ public class RateAPITest {
     public void testGet() {
         doPostRequest(POST_URL);
         String rate = doGetRequest(GET_URL);
-        assertEquals("RATE", rate);
+        assertEquals(RATE, rate);
     }
 
     private String doPostRequest(String urlString) {
