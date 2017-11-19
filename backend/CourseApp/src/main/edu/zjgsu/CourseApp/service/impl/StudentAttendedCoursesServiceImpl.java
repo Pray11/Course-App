@@ -5,26 +5,26 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import edu.zjgsu.CourseApp.bean.SACBean;
+import edu.zjgsu.CourseApp.bean.StudentAttendedCoursesBean;
 import edu.zjgsu.CourseApp.dao.BaseDao;
 import edu.zjgsu.CourseApp.dao.impl.BaseDaoImpl;
-import edu.zjgsu.CourseApp.service.SACService;
+import edu.zjgsu.CourseApp.service.StudentAttendedCoursesService;
 
-public class SACServiceImpl implements SACService{
+public class StudentAttendedCoursesServiceImpl implements StudentAttendedCoursesService{
 
 	BaseDao baseDao = new BaseDaoImpl();
 	
 	@Override
-	public List<SACBean> searchCourseRate(String courseId, String studentId) {
+	public List<StudentAttendedCoursesBean> searchCourseRate(String courseId, String studentId) {
 		// TODO Auto-generated method stub
 		String sql = "select * from student_attended_courses where (course_id="+courseId+" and student_id="+studentId+");";
 		List<Object> rsList = baseDao.query(sql, null);
-		List<SACBean> sacBList = new ArrayList<SACBean>();
+		List<StudentAttendedCoursesBean> sacBList = new ArrayList<StudentAttendedCoursesBean>();
 		
 		for (int i=0; i<rsList.size(); i++) {
 			Map<String, Object> rsMap = (Map) rsList.get(i);
 			
-			SACBean sacBean = new SACBean();
+			StudentAttendedCoursesBean sacBean = new StudentAttendedCoursesBean();
 			sacBean.setCourse_id((long) rsMap.get("course_id"));
 			sacBean.setRate((String) rsMap.get("rate"));
 			sacBean.setStudent_id((String) rsMap.get("student_id"));

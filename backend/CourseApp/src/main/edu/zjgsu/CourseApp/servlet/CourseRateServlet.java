@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import edu.zjgsu.CourseApp.bean.SACBean;
-import edu.zjgsu.CourseApp.service.SACService;
-import edu.zjgsu.CourseApp.service.impl.SACServiceImpl;
+import edu.zjgsu.CourseApp.bean.StudentAttendedCoursesBean;
+import edu.zjgsu.CourseApp.service.StudentAttendedCoursesService;
+import edu.zjgsu.CourseApp.service.impl.StudentAttendedCoursesServiceImpl;
 
 /**
  * Servlet implementation class CourseRateServlet
@@ -20,14 +20,14 @@ import edu.zjgsu.CourseApp.service.impl.SACServiceImpl;
 @WebServlet("/rate")
 public class CourseRateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	public SACService sacService;   
+	public StudentAttendedCoursesService sacService;   
     /**
      * @see HttpServlet#HttpServlet()
      */
     public CourseRateServlet() {
         super();
         // TODO Auto-generated constructor stub
-        sacService = new SACServiceImpl();
+        sacService = new StudentAttendedCoursesServiceImpl();
     }
 
 	/**
@@ -41,7 +41,7 @@ public class CourseRateServlet extends HttpServlet {
 	    String courseId = request.getParameter("courseId");
 	    String studentId = request.getParameter("studentId");
 	    
-	    List<SACBean> sacRs = sacService.searchCourseRate(courseId, studentId);
+	    List<StudentAttendedCoursesBean> sacRs = sacService.searchCourseRate(courseId, studentId);
 	    
 	    try{
 	    	if (sacRs.size()>0) {
