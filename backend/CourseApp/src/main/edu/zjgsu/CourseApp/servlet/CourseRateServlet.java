@@ -17,7 +17,7 @@ import edu.zjgsu.CourseApp.service.impl.SACServiceImpl;
 /**
  * Servlet implementation class CourseRateServlet
  */
-@WebServlet("/CourseRate")
+@WebServlet("/rate")
 public class CourseRateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public SACService sacService;   
@@ -38,26 +38,26 @@ public class CourseRateServlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		
-	    String courseId = request.getParameter("courseid");
-	    String studentId = request.getParameter("studentid");
+	    String courseId = request.getParameter("courseId");
+	    String studentId = request.getParameter("studentId");
 	    
 	    List<SACBean> sacRs = sacService.searchCourseRate(courseId, studentId);
 	    
 	    try{
 	    	if (sacRs.size()>0) {
-	    		for (int i=0; i<sacRs.size(); i++) {
+	    		/*for (int i=0; i<sacRs.size(); i++) {
 	    			out.println(sacRs.get(i).getStudent_id());
 	    			out.println(sacRs.get(i).getCourse_id());
 	    			out.println(sacRs.get(i).getRate());
-	    		}
+	    		}*/
+	    		out.println("RATE");
 	    	} else {
-	    		out.println("未查询到结果");
+	    		out.println("RATE");
 	    	}
 		    
 	    } catch (Exception e) {
 	    	out.println("ooooooah wrong!");
 	    } finally {
-	    	
 	    	out.close();
 	    }
 	    
@@ -71,22 +71,24 @@ public class CourseRateServlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		
-	    String courseId = request.getParameter("courseid");
-	    String studentId = request.getParameter("studentid");
+	    String courseId = request.getParameter("courseId");
+	    String studentId = request.getParameter("studentId");
 	    String rate = request.getParameter("rate");
-	    String type = request.getParameter("type");
+	    String type = "insert";//request.getParameter("type");
 		
 	    if (type.equals("insert")) {
 			int changedLines = sacService.insertCourseRate(courseId, studentId, rate);
 			if (changedLines!=0) {
-				out.println("插入成功 affected rows:" + changedLines);
+				//out.println("插入成功 affected rows:" + changedLines);
+				out.println("Done");
 			} else {
 				out.println("oooooooah wrong!");
 			}
 	    } else if (type.equals("update")) {
 			int changedLines = sacService.insertCourseRate(courseId, studentId, rate);
 			if (changedLines!=0) {
-				out.println("更新成功 affected rows:" + changedLines);
+				//out.println("更新成功 affected rows:" + changedLines);
+				out.println("Done");
 			} else {
 				out.println("oooooooah wrong!");
 			}
