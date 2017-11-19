@@ -21,7 +21,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -40,6 +40,12 @@
 					"name": "course-info",
 					"pathName": "pages/course-info/course-info",
 					"query": "courseId=1"
+				},
+				{
+					"id": -1,
+					"name": "favourite",
+					"pathName": "pages/favourite/favourite",
+					"query": ""
 				}
 			]
 		}

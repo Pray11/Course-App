@@ -1,0 +1,16 @@
+/* pages/favourite/favourite.wxss */
+.body {
+  margin-left: 50px;
+}
+
+.course {
+  margin-bottom: 50px;
+}
+
+.courseName {
+  font-size: 20pt;
+}
+
+.courseTime {
+  font-style: italic;
+}

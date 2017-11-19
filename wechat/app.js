@@ -36,10 +36,15 @@ App({
   globalData: {
     userInfo: null,
 
-    courses:[{id: '1', name: 'course1', rating: 4, description: 'this is good course'},
-      {id: '2', name: 'course2', rating: 3, description: 'this is a bad course'},
-      {id: '3', name: 'course3', rating: 1, description: 'barely learnable'}],
+    courses:[{id: '1', name: 'course1', rating: 4, description: 'this is good course', time: '2-6-8'},
+      {id: '2', name: 'course2', rating: 3, description: 'this is a bad course', time: '2-9-11'},
+      {id: '3', name: 'course3', rating: 1, description: 'barely learnable', time: '4-6-8,4-9-11'}],
 
-    liked: []
+    liked: ['1', '2']
   }
 })
+
+// data convention
+// time for courses:
+// 2-9-11 means Tuesday, the 9th until 11th classes,
+// some course may have several slots, those will be separated by comma without any whitespace
