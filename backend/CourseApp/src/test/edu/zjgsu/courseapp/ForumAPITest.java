@@ -1,5 +1,6 @@
 package edu.zjgsu.courseapp;
 
+import edu.zjgsu.courseapp.utils.NetworkUtility;
 import org.apache.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -9,8 +10,6 @@ import org.junit.Test;
 import javax.json.Json;
 import javax.json.JsonObject;
 import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.Properties;
 
 import static org.junit.Assert.assertEquals;

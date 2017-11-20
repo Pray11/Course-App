@@ -1,13 +1,10 @@
-package edu.zjgsu.courseapp;
+package edu.zjgsu.courseapp.utils;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -26,6 +23,7 @@ public class NetworkUtility {
             HttpURLConnection conn = (HttpURLConnection)
                     (new URL(urlString)).openConnection();
             conn.setRequestMethod("POST");
+            conn.setRequestProperty("Content-Type", "application/json");
             conn.setDoInput(true);
             conn.setDoOutput(true);
             BufferedWriter writer = new BufferedWriter(
@@ -90,5 +88,25 @@ public class NetworkUtility {
             e.printStackTrace();
         }
         return "";
+    }
+
+    public static String exhaustBufferedReader(BufferedReader rd) {
+        String line;
+        StringBuffer response = new StringBuffer();
+        boolean firstLine = true;
+        try {
+            while ((line = rd.readLine()) != null) {
+                if (firstLine) {
+                    firstLine = false;
+                    response.append(line);
+                } else {
+                    response.append("\n" + line);
+                }
+            }
+            rd.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return response.toString();
     }
 }

@@ -15,9 +15,9 @@ import java.util.Map;
 public class DBHelper {
     
     private static final String DRIVENAME = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://localhost:3306/courseapp_db?characterEncoding=utf8&useSSL=false";
+    private static final String URL = "jdbc:mysql://localhost:3306/course_app?characterEncoding=utf8&useSSL=false";
     private static final String USER = "root";
-    private static final String PASSWORD = "";
+    private static final String PASSWORD = "root";
     
     private Connection conn = null;
     private Statement st = null;

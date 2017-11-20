@@ -1,11 +1,11 @@
 package edu.zjgsu.courseapp;
 
+import edu.zjgsu.courseapp.utils.NetworkUtility;
 import org.apache.log4j.Logger;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.net.*;
 import java.io.*;
 import java.util.Properties;
 

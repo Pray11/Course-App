@@ -2,3 +2,10 @@
 2017-11-19 12:31:52 INFO  RateAPITest:21 - Using url-starter: http://localhost:8080
 2017-11-19 12:32:32 INFO  RateAPITest:21 - Using url-starter: http://localhost:8080/rate
 2017-11-19 16:43:22 INFO  RateAPITest:22 - Using url-starter: http://localhost:8080/WebApp_ID
+2017-11-20 22:22:12 INFO  ForumAPITest:26 - Forum API Test is using url-starter: http://localhost:8080/interaction
+2017-11-20 22:23:39 INFO  ForumAPITest:26 - Forum API Test is using url-starter: http://localhost:8080/interaction
+2017-11-20 22:26:50 INFO  ForumAPITest:26 - Forum API Test is using url-starter: http://localhost:8080/interaction
+2017-11-20 22:27:16 INFO  ForumAPITest:26 - Forum API Test is using url-starter: http://localhost:8080/interaction
+2017-11-20 22:28:40 INFO  ForumAPITest:26 - Forum API Test is using url-starter: http://localhost:8080/interaction
+2017-11-20 23:42:04 INFO  ForumAPITest:26 - Forum API Test is using url-starter: http://localhost:8080/interaction
+2017-11-20 23:43:40 INFO  ForumAPITest:26 - Forum API Test is using url-starter: http://localhost:8080/interaction

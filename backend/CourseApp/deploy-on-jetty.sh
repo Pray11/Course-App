@@ -1,2 +1,2 @@
-mvn package -Dmaven.test.skip=true
-mv target/WebApp_ID.war ~/Jetty/webapps/rate.war
+mvn clean package -Dmaven.test.skip=true
+mv target/WebApp_ID.war ~/Jetty/webapps/interaction.war
