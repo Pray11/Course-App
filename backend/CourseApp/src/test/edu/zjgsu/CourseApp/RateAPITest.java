@@ -1,6 +1,7 @@
-package edu.zjgsu.CourseApp;
+package edu.zjgsu.courseapp;
 
 import org.apache.log4j.Logger;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -18,7 +19,7 @@ public class RateAPITest {
         try {
             properties.loadFromXML(new FileInputStream(new File("conf/test.conf")));
             urlStarter = (String) properties.get("url-starter");
-            logger.info("Using url-starter: " + urlStarter);
+            logger.info("Rate API Test is using url-starter: " + urlStarter);
         } catch (IOException e) {
             e.printStackTrace();
             urlStarter = "http://localhost:8080";
@@ -43,44 +44,21 @@ public class RateAPITest {
     }
 
     private String doPostRequest(String urlString) {
-        return doRequest(urlString, "POST");
+        return NetworkUtility.doPostRequest(urlString);
     }
-
+    
     private String doGetRequest(String urlString) {
-        return doRequest(urlString, "GET");
-    }
-
-    /**
-     * This method assumes that the response from some host contains only
-     * one line of message
-     * @param urlString
-     * @return one line response from the host
-     */
-    private String doRequest(String urlString, String method) {
-        try {
-            HttpURLConnection conn = (HttpURLConnection)
-                    (new URL(urlString)).openConnection();
-            conn.setDoInput(true);
-            conn.setRequestMethod(method);
-            BufferedReader rd = new BufferedReader(
-                    new InputStreamReader(conn.getInputStream()));
-            String response = rd.readLine();
-            rd.close();
-            return response;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return "";
+        return NetworkUtility.doGetRequest(urlString);
     }
 
     private static String urlStarter;
     private final String COURSE_ID = "1";
-    private final String STUDENT_ID = "2";
+    private final String STUDENT_ID = "1512190417";
     private final String RATE = "5";
     private String POST_URL = urlStarter + "/rate?rate=" + RATE +
-            "courseId=" + COURSE_ID + "&studentId=" + STUDENT_ID;
+            "&courseId=" + COURSE_ID + "&studentId=" + STUDENT_ID;
     private String GET_URL = urlStarter + "/rate?" +
-            "courseId=" + COURSE_ID + "&studentId=" + STUDENT_ID;
+            "&courseId=" + COURSE_ID + "&studentId=" + STUDENT_ID;
 
     private static final Logger logger = Logger.getLogger(RateAPITest.class);
 }
