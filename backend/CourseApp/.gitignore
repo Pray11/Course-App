@@ -1,2 +1,5 @@
 /target/
 /bin/
+workspace.xml
+*.iws
+tasks.xml
