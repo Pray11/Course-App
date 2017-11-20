@@ -27,16 +27,14 @@
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
 		</dependency>
+		
+		<dependency>
+    		<groupId>mysql</groupId>
+    		<artifactId>mysql-connector-java</artifactId>
+    		<version>5.1.25</version>
+		</dependency> 
 
-        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.0.1</version>
-        </dependency>
-
-
-        <dependency>
+    <dependency>
     		<groupId>mysql</groupId>
     		<artifactId>mysql-connector-java</artifactId>
     		<version>5.1.25</version>
@@ -55,24 +53,24 @@
 		<finalName>WebApp_ID</finalName>
 		<plugins>
 			<plugin>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.3</version>
-			<configuration>
-			<source>1.8</source>
-			<target>1.8</target>
-			</configuration>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.3</version>
+        <configuration>
+        <source>1.8</source>
+        <target>1.8</target>
+        </configuration>
 			</plugin>
 		</plugins>
-        <resources>
-            <resource>
-                <directory>src/resources</directory>
-                <includes>
-                    <include>*.properties</include>
-                </includes>
-                <filtering>false</filtering>
-            </resource>
-        </resources>
+    <resources>
+        <resource>
+            <directory>src/resources</directory>
+            <includes>
+                <include>*.properties</include>
+            </includes>
+            <filtering>false</filtering>
+        </resource>
+    </resources>
 
-    </build>
+  </build>
 	
 </project>

@@ -1,6 +1,6 @@
 package edu.zjgsu.CourseApp.bean;
 
-public class SACBean {
+public class StudentAttendedCoursesBean {
 	private String student_id;
 	private long course_id;
 	private String rate;

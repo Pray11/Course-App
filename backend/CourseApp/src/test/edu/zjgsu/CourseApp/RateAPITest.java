@@ -1,6 +1,7 @@
 package edu.zjgsu.CourseApp;
 
 import org.apache.log4j.Logger;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -45,7 +46,7 @@ public class RateAPITest {
     private String doPostRequest(String urlString) {
         return doRequest(urlString, "POST");
     }
-
+    
     private String doGetRequest(String urlString) {
         return doRequest(urlString, "GET");
     }
@@ -75,12 +76,12 @@ public class RateAPITest {
 
     private static String urlStarter;
     private final String COURSE_ID = "1";
-    private final String STUDENT_ID = "2";
+    private final String STUDENT_ID = "1512190417";
     private final String RATE = "5";
     private String POST_URL = urlStarter + "/rate?rate=" + RATE +
-            "courseId=" + COURSE_ID + "&studentId=" + STUDENT_ID;
+            "&courseId=" + COURSE_ID + "&studentId=" + STUDENT_ID;
     private String GET_URL = urlStarter + "/rate?" +
-            "courseId=" + COURSE_ID + "&studentId=" + STUDENT_ID;
+            "&courseId=" + COURSE_ID + "&studentId=" + STUDENT_ID;
 
     private static final Logger logger = Logger.getLogger(RateAPITest.class);
 }
