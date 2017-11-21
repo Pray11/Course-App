@@ -16,13 +16,24 @@ public class ForumRecordServiceImpl implements ForumRecordService {
 
     @Override
     public int delete(ForumRecord forumRecord) {
-        return 0;
+        StringBuffer sql = new StringBuffer();
+        sql.append("DELETE FROM " + TABLE_NAME + " WHERE");
+        // colume 1, course_id
+        sql.append(" course_id = " + forumRecord.getCourseId());
+        // column 2, comment_time
+        sql.append(" AND comment_time = \"" + forumRecord.getCommentTime() + "\"");
+        // column 3, comment_by
+        sql.append(" AND comment_by = \"" + forumRecord.getCommentBy() + "\"");
+        // column 4, content
+        sql.append(" AND content = \"" + forumRecord.getContent() + "\"");
+        sql.append(";");
+        return dao.update(sql.toString(), null);
     }
 
     @Override
     public int insert(ForumRecord forumRecord) {
         StringBuffer sql = new StringBuffer();
-        sql.append("INSERT INTO forum VALUES(");
+        sql.append("INSERT INTO " + TABLE_NAME + " VALUES(");
         sql.append("'" + forumRecord.getCourseId() + "', ");
         sql.append("str_to_date('" + forumRecord.getCommentTime()
                 + "', '%Y-%m-%d %H:%i:%S'), ");
@@ -33,13 +44,14 @@ public class ForumRecordServiceImpl implements ForumRecordService {
 
     @Override
     public List<ForumRecord> select(String courseId) {
-        String sql = "SELECT * FROM forum WHERE id = " + courseId + ";";
+        String sql = "SELECT * FROM " + TABLE_NAME + " WHERE course_id = " + courseId
+                + " ORDER BY comment_time DESC;";
         List<Object> objectList = dao.query(sql, null);
         List<ForumRecord> result = new ArrayList<>();
         for (Object object : objectList) {
             ForumRecord record = new ForumRecord();
             Map<String, Object> map = (Map<String, Object>) object;
-            record.setCourseId((String) map.get("id"));
+            record.setCourseId((String) map.get("course_id"));
             record.setCommentBy((String) map.get("comment_by"));
             record.setContent((String) map.get("content"));
 
@@ -52,4 +64,6 @@ public class ForumRecordServiceImpl implements ForumRecordService {
     }
 
     BaseDao dao = new BaseDaoImpl();
+
+    private static final String TABLE_NAME = "test_forum";
 }
