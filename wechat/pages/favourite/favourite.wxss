@@ -18,9 +18,10 @@
 .timeHeader {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
-.timeText, .classTime {
+.timeText, .classTime, .weekdays{
   width: 30%;
 }
 

@@ -41,7 +41,7 @@ App({
       {id: '3', name: 'Machine Learning', rating: 1, description: 'barely learnable', weekTime: ['4'], classTime: ['6', '7', '8','9', '10','11']},
       {id: '4', name: 'Discrete Mathematics', rating: 5, description: 'beautiful teacher', weekTime: ['2','4'], classTime: [['6', '7', '8'], ['6', '7', '8', '9', '10', '11']]},
       { id: '5', name: 'Roadster', rating: 5, description: 'car!!', weekTime: ['2', '4'], classTime: [['6', '7', '8', '9', '10', '11'], ['6', '7', '8', ]] }],
-    liked: ['4', '5']
+    liked: ['1', '4', '5']
   }
 })
 

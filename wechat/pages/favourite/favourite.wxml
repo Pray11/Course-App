@@ -11,11 +11,11 @@
           <view class="timeText">
             Time
           </view>
-          <view class="weekdays">
-            <block wx:for="{{favourites[id].weekTime}}" wx:key="">
+          <block wx:for="{{favourites[id].weekTime}}" wx:key="">
+            <view class="weekdays">
               {{weekdays[item]}}
-            </block>
-          </view>
+            </view>
+          </block>
         </view>
         <!-- For courses that take place in one weekday -->
         <block wx:if="{{favourites[id].weekTime.length == 1}}">
@@ -32,38 +32,25 @@
         </block>
         <!-- For courses that take place in two weekdays -->
         <block wx:else>
-
-
-          <block wx:if="{{favourites[id].classTime[0].length > favourites[id].classTime[1].length}}">
-            first is longer
-            <block wx:for="{{favourites[id].classTime[0]}}" wx:for-item="classTime" wx:for-index="i" wx:key="">
-              <view class="timeRow">
-                <view class="classTime">
-                  {{classTime}}
-                </view>
+          <block wx:for="{{favourites[id].timeTable}}" wx:key="" wx:for-item="row">
+            <view class="timeRow">
+              <view class="classTime">
+                {{row[0]}}
+              </view>
+              <block wx:if="{{row[1] === 1}}">
                 <view class="bigX">
                   <image src="/images/bigX.png" style="width: 80%; height: 30px;"/>
                 </view>
-                <block wx:if="{{i < favourites[id].classTime[1].length}}">
-                  <block wx:if="the data fits">
-                    <view class="bigX">
-                      <image src="/images/bigX.png" style="width: 80%; height: 30px;"/>
-                    </view>
-                  </block>
-                </block>
-              </view>
-            </block>
-          </block>
-          <!-- copy and paste the above codes -->
-          <block wx:else>
-            second is longer
-            <block wx:for="{{favourites[id].classTime[1]}}" wx:for-item="classTime" wx:key="">
-              <view class="timeRow">
-                <view class="classTime">
-                  {{classTime}}
+              </block>
+              <block wx:else>
+                <view class="bigX"/>
+              </block>
+              <block wx:if="{{row[2] === 1}}">
+                <view class="bigX">
+                  <image src="/images/bigX.png" style="width: 80%; height: 30px;"/>
                 </view>
-              </view>
-            </block>
+              </block>
+            </view>
           </block>
         </block>
         

@@ -6,8 +6,7 @@ Page({
    */
   data: {
     favourites: [],
-    weekdays:['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-    timeTable:[]
+    weekdays:['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
   },
 
   /**
@@ -31,7 +30,6 @@ Page({
    */
   onReady: function () {
     // setting the time table
-    var timeTable = [];
     var favourites = this.data.favourites;
     for (var i = 0; i < favourites.length; i++) {
       // configure time table only for classes that have slots in more than two days, inclusively
@@ -42,7 +40,7 @@ Page({
             < this.data.favourites[i].classTime[1].length) {
           biggerIndex = 1;
         }
-        var timeTableEntry = {id: favourites[i].id, timeTable: []};
+        var timeTable = [];
         // iterate through the classTime, 2-d array
         for (var j = 0; j < favourites[i].classTime[biggerIndex].length; j++) {
           // fill in the zeros
@@ -68,9 +66,9 @@ Page({
           if (hasIndex) {
             aRow[2] = 1;
           }
-          timeTableEntry.timeTable.push(aRow);
+          timeTable.push(aRow);
         }
-        timeTable.push(timeTableEntry);
+        favourites[i].timeTable = timeTable;
         // // set for the first weekday, Tuesday
         // for (var j = 0; j < favourites[i].classTime[0].length; j++) {
 
@@ -79,7 +77,7 @@ Page({
       }
     }
     this.setData({
-      timeTable: timeTable
+      favourites: favourites
     })
     console.log(favourites);
   },
