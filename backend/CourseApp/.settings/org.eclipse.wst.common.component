@@ -5,6 +5,7 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/resources"/>
         <property name="java-output-path" value="/CourseApp/target/classes"/>
         <property name="context-root" value="WebApp_ID"/>
     </wb-module>
