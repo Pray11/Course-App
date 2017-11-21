@@ -67,7 +67,7 @@ Page({
 
   submitButton: function(e) {
     wx.navigateTo({
-      url: '../search/search',
+      url: '../search-results/search-results',
     })
   }
 })

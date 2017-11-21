@@ -27,6 +27,7 @@
   </view>
 
   <view class="forumBody">
+   <view class="top">
     <view class="forumEntry">
       <view class="entryHeader">
         <view class="entryTitle">
@@ -39,6 +40,7 @@
       <view class="entryBody">
         This is my viry first comment, I feel excited about this app!!
       </view>
+    </view>
     </view>
     <view class="forumEntry">
       <view class="entryHeader">

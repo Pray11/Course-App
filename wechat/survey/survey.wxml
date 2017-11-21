@@ -35,6 +35,3 @@
   <input type="text" class="inputBox"/>
   <button bindtap='submitButton'> Submit </button>
 </view>
-  
-           
-
