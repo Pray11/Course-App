@@ -6,7 +6,8 @@ Page({
    */
   data: {
     favourites: [],
-    weekdays:['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    weekdays:['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    timeTable:[]
   },
 
   /**
@@ -29,17 +30,58 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    // draw the course tables
-    // step 1.1 define number of columns
-    // var numberOfTuesdays = 0, numberOfThursdays = 0;
-    // var favourites = this.data.favourites;
-    // for (var i = 0; i < favourites.length; i++) {
-    //   var timeString = favourites[i].time;
-    //   if (timeString.indexOf(',') === -1) {
-    //     // there is only one time slot
-    //     // TODO call it a day
-    //   }
-    // }
+    // setting the time table
+    var timeTable = [];
+    var favourites = this.data.favourites;
+    for (var i = 0; i < favourites.length; i++) {
+      // configure time table only for classes that have slots in more than two days, inclusively
+      if (this.data.favourites[i].weekTime.length >= 2) {
+        // index of the weekday that has more slots, by default it is 0
+        var biggerIndex = 0;
+        if (this.data.favourites[i].classTime[0].length
+            < this.data.favourites[i].classTime[1].length) {
+          biggerIndex = 1;
+        }
+        var timeTableEntry = {id: favourites[i].id, timeTable: []};
+        // iterate through the classTime, 2-d array
+        for (var j = 0; j < favourites[i].classTime[biggerIndex].length; j++) {
+          // fill in the zeros
+          var index = Number(favourites[i].classTime[biggerIndex][j]);
+          var aRow =  [index, 0, 0];
+          // compute the first place
+          var hasIndex = false;
+          for (var k = 0; k < favourites[i].classTime[0].length; k++) {
+            if (Number(favourites[i].classTime[0][k]) === index) {
+              hasIndex = true;
+            }
+          }
+          if (hasIndex) {
+            aRow[1] = 1;
+          }
+          // compute the second place
+          hasIndex = false;
+          for (var k = 0; k < favourites[i].classTime[1].length; k++) {
+            if (Number(favourites[i].classTime[1][k]) === index) {
+              hasIndex = true;
+            }
+          }
+          if (hasIndex) {
+            aRow[2] = 1;
+          }
+          timeTableEntry.timeTable.push(aRow);
+        }
+        timeTable.push(timeTableEntry);
+        // // set for the first weekday, Tuesday
+        // for (var j = 0; j < favourites[i].classTime[0].length; j++) {
+
+        // }
+        // timeTableEntry.push(favourites[i].classTime[biggerIndex]);
+      }
+    }
+    this.setData({
+      timeTable: timeTable
+    })
+    console.log(favourites);
   },
 
   /**

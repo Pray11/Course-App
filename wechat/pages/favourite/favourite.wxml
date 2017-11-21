@@ -1,4 +1,5 @@
 <!--pages/favourite/favourite.wxml-->
+{{getOne}}
 <view class="body">
   <block wx:for="{{favourites}}" wx:key="" wx:for-item="course" wx:for-index="id">
     <view class="course">
@@ -31,6 +32,8 @@
         </block>
         <!-- For courses that take place in two weekdays -->
         <block wx:else>
+
+
           <block wx:if="{{favourites[id].classTime[0].length > favourites[id].classTime[1].length}}">
             first is longer
             <block wx:for="{{favourites[id].classTime[0]}}" wx:for-item="classTime" wx:for-index="i" wx:key="">
@@ -42,9 +45,11 @@
                   <image src="/images/bigX.png" style="width: 80%; height: 30px;"/>
                 </view>
                 <block wx:if="{{i < favourites[id].classTime[1].length}}">
-                  <view class="bigX">
-                    <image src="/images/bigX.png" style="width: 80%; height: 30px;"/>
-                  </view>
+                  <block wx:if="the data fits">
+                    <view class="bigX">
+                      <image src="/images/bigX.png" style="width: 80%; height: 30px;"/>
+                    </view>
+                  </block>
                 </block>
               </view>
             </block>
