@@ -81,4 +81,18 @@ Page({
     });
     getList(this);
   },
+  inputTyping: function (e) {
+    getList(this, e.detail.value);
+    console.log(e.detail.value);
+    this.setData({
+      inputVal: e.detail.value
+    });
+  },
+  goToCourse: function (e) {
+    console.log('Going to: ' + e.target.id);
+    var courseId = e.target.id.substring(6);
+    wx.navigateTo({
+      url: '../course-info/course-info?courseId=' + courseId,
+    })
+  },
 })

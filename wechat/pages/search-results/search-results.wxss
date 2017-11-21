@@ -1,5 +1,0 @@
-/* pages/search-results/search-results.wxss */
-.courseInfo {
-  margin-left: 50px;
-  margin-top: 50px;
-}

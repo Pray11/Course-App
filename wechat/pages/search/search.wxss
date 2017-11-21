@@ -72,7 +72,16 @@
   padding: 7px 8px;
   font-size: 0;
 }
-weui-search-bar__label
+.weui-icon-search {
+  margin-right: 8px;
+  font-size: inherit;
+}
+.weui-search-bar__label{
+   margin-left: 10px;
+  line-height: 28px;
+  color: #09BB07;
+ white-space: nowrap;
+}
 .weui-search-bar__cancel-btn {
   margin-left: 10px;
   line-height: 28px;

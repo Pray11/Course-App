@@ -4,7 +4,11 @@
     "pages/logs/logs",
     "pages/survey/survey",
     "pages/search/search",
-    "pages/rate/rate"
+    "pages/rate/rate",
+    "pages/courses/courses",
+    "pages/course-info/course-info",
+    "pages/favourite/favourite"
+   
   ],
   "window":{
     "backgroundTextStyle":"light",

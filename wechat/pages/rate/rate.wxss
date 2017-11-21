@@ -1,13 +1,73 @@
 /* pages/rate/rate.wxss */
-.c-minheight {
-        min-height: 60px;
+@import "../public/tpl/stars.wxss";
+
+/* pages/courses/courses.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  padding: 55rpx 0;
+  box-sizing: border-box;
+} 
+
+.content_container {
+  height: 100%;
+  display: flex;
+  align-items: left;
+  margin-bottom: 40rpx;
+  margin-left: 20rpx;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  box-sizing: border-box;
 }
-.c-block {
-        display: block;
+
+.ratingDialog {
+  width: 90%;
+  height: 17.5%;  
+  position: fixed; 
+  top: 15%;
+  left: 5%;
+  z-index: 1000;  
+  background: #FAFAFA;
+  border-radius: 3px;
+  overflow-y: scroll;
 }
-.wx-view_movilelist_item{padding: 10px; border-style: solid; border-bottom-width: 1px; border-bottom-color: rgb(153, 153, 153); border-bottom-style: none; border-top-style: none; border-right-style: none; border-left-style: none; }
-.wx-navigator_movielist_item{border-style: none none solid; border-bottom-width: 1px; border-bottom-color: rgba(170,170,170,1); }
-.wx-image_movielist_item_cover{width: 80px; height: 112px; float: left; }
-.wx-view_6zMKSh{margin-left: 95px; height: 112px; }
-.wx-image_movielist_item_title{margin-bottom: 5px; font-size: 16px; }
-.wx-image_movielist_item_actors{color: rgb(153, 153, 153); font-size: 13px; line-height: 1.5em; }
+
+.dialogMarsk {  
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 1000;  
+  background: rgba(0, 0, 0, 0.6);
+  overflow: hidden;  
+}
+
+.rankcontauber_dialog{ 
+  position: fixed;
+  top:20%;
+  left:20%;
+  display: flex;
+  flex-direction: row;
+}
+.rankstars_dialog{
+  display: flex;
+  flex-direction: row;
+  height: 60rpx;
+  margin-right: 6rpx;
+  margin-top: 12rpx;
+}
+.rankstars_dialog image{
+  padding-left: 3rpx;
+  height: 60rpx;
+  width: 60rpx;
+}
+.rankscore_dialog{
+  color: #4A6141;
+  margin-top: 10rpx;
+  font-size: 20px;
+}

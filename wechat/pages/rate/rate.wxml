@@ -1,12 +1,27 @@
 <input placeholder="输入你的学号"/>
-        <navigator bindtap="bindViewTap4" class="wx-navigator_movielist_item"  id="wx_navigator_46b77b4d" hover-class="navigator-hover" url="../detail/detail">
-        <view class="c-minheight wx-view_movilelist_item" >
-            <image class="wx-image_movielist_item_cover"   mode="scaleToFill" src="http://pic.lvmama.com//uploads/pc/place2/2017-05-25/a33272f0-69bc-4037-ae5d-fe0a21e8c9ce_180_120.jpg" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat; "/>
-            <view class="c-minheight wx-view_6zMKSh">
-                <text class="c-block wx-image_movielist_item_title" >CourseA</text>
-                <text class="c-block wx-image_movielist_item_actors">lectuer</text>
-                 <text class="c-block wx-image_movielist_item_actors">information1</text>
-                  <text class="c-block wx-image_movielist_item_actors">information2</text>
-            </view>
+ <!--pages/courses/courses.wxml-->
+<!--text>pages/courses/courses.wxml</text-->
+<import src="../public/tpl/stars.wxml" />
+
+<view class="container" wx:for="{{courses}}" wx:for-item="course_item" >
+  <view class="content_container">
+    {{course_item.name}}
+  </view>
+  <view data-index="{{index}}" bindtap="showRatingDialog" data-statu="open">
+    <template is="starsTpl" data="{{starsArr:course_item.starsArr, starScore:course_item.starScore}}"></template>
+  </view>
+</view>
+  
+<view class="dialogMarsk" bindtap="showRatingDialog" data-statu="close" wx:if="{{isDialogShow}}"></view>  
+<view class="ratingDialog" wx:if="{{isDialogShow}}">
+  <view class="rankcontauber_dialog">
+      <view class="rankstars_dialog">
+        <block wx:for="{{starsArr_dialog}}" wx:for-item="item">
+            <image wx:if="{{item === 0}}" src="/images/stargray.png" bindtap="ratingCourse" data-index="{{index}}"></image>
+            <image wx:elif="{{item === 1}}" src="/images/starmedium.png" bindtap="ratingCourse" data-index="{{index}}"></image>
+            <image wx:else="{{item === 2}}" src="/images/starfull.png" bindtap="ratingCourse" data-index="{{index}}"></image>
+        </block>  
         </view>
-</navigator>
+        <text class="rankscore_dialog">{{starScore_dialog}}</text>
+    </view>
+</view>
