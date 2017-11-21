@@ -36,11 +36,12 @@ App({
   globalData: {
     userInfo: null,
 
-    courses:[{id: '1', name: 'course1', rating: 4, description: 'this is good course', time: '2-6-8'},
-      {id: '2', name: 'course2', rating: 3, description: 'this is a bad course', time: '2-9-11'},
-      {id: '3', name: 'course3', rating: 1, description: 'barely learnable', time: '4-6-8,4-9-11'}],
-
-    liked: ['1', '2']
+    courses:[{id: '1', name: 'Software Engineering', rating: 4, description: 'this is good course', weekTime: ['2'], classTime: ['6', '7', '8']},
+      {id: '2', name: 'Artificial Intelligence', rating: 3, description: 'this is a bad course', weekTime: ['2'], classTime: ['9', '10', '11']},
+      {id: '3', name: 'Machine Learning', rating: 1, description: 'barely learnable', weekTime: ['4'], classTime: ['6', '7', '8','9', '10','11']},
+      {id: '4', name: 'Discrete Mathematics', rating: 5, description: 'beautiful teacher', weekTime: ['2','4'], classTime: [['6', '7', '8'], ['6', '7', '8', '9', '10', '11']]},
+      { id: '5', name: 'Roadster', rating: 5, description: 'car!!', weekTime: ['2', '4'], classTime: [['6', '7', '8', '9', '10', '11'], ['6', '7', '8', ]] }],
+    liked: ['4', '5']
   }
 })
 

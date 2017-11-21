@@ -12,16 +12,6 @@
 	"appid": "touristappid",
 	"projectname": "Course-App",
 	"condition": {
-		"weapp": {
-			"current": 0,
-			"list": [
-				{
-					"id": -1,
-					"name": "course",
-					"pathName": "pages/courses/courses"
-				}
-			]
-		},
 		"search": {
 			"current": -1,
 			"list": []
@@ -55,6 +45,12 @@
 					"id": -1,
 					"name": "favourite",
 					"pathName": "pages/favourite/favourite",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "course",
+					"pathName": "pages/courses/courses",
 					"query": ""
 				}
 			]

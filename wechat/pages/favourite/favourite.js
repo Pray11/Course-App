@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    favourites: []
+    favourites: [],
+    weekdays:['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
   },
 
   /**
@@ -30,15 +31,15 @@ Page({
   onReady: function () {
     // draw the course tables
     // step 1.1 define number of columns
-    var numberOfTuesdays = 0, numberOfThursdays = 0;
-    var favourites = this.data.favourites;
-    for (var i = 0; i < favourites.length; i++) {
-      var timeString = favourites[i].time;
-      if (timeString.indexOf(',') === -1) {
-        // there is only one time slot
-        // TODO call it a day
-      }
-    }
+    // var numberOfTuesdays = 0, numberOfThursdays = 0;
+    // var favourites = this.data.favourites;
+    // for (var i = 0; i < favourites.length; i++) {
+    //   var timeString = favourites[i].time;
+    //   if (timeString.indexOf(',') === -1) {
+    //     // there is only one time slot
+    //     // TODO call it a day
+    //   }
+    // }
   },
 
   /**
@@ -80,6 +81,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })

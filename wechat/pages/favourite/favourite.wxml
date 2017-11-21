@@ -1,12 +1,67 @@
 <!--pages/favourite/favourite.wxml-->
 <view class="body">
-  <block wx:for="{{favourites}}">
+  <block wx:for="{{favourites}}" wx:key="" wx:for-item="course" wx:for-index="id">
     <view class="course">
       <view class="courseName">
-        {{item.name}}
+        {{course.name}}
       </view>
       <view class="courseTime">
-        {{item.time}}
+        <view class="timeHeader">
+          <view class="timeText">
+            Time
+          </view>
+          <view class="weekdays">
+            <block wx:for="{{favourites[id].weekTime}}" wx:key="">
+              {{weekdays[item]}}
+            </block>
+          </view>
+        </view>
+        <!-- For courses that take place in one weekday -->
+        <block wx:if="{{favourites[id].weekTime.length == 1}}">
+          <block wx:for="{{favourites[id].classTime}}" wx:key="">
+            <view class="timeRow">
+              <view class="classTime">
+                {{item}}
+              </view>
+              <view class="bigX">
+                <image src="/images/bigX.png" style="width: 80%; height: 30px;"/>
+              </view>
+            </view>
+          </block>
+        </block>
+        <!-- For courses that take place in two weekdays -->
+        <block wx:else>
+          <block wx:if="{{favourites[id].classTime[0].length > favourites[id].classTime[1].length}}">
+            first is longer
+            <block wx:for="{{favourites[id].classTime[0]}}" wx:for-item="classTime" wx:for-index="i" wx:key="">
+              <view class="timeRow">
+                <view class="classTime">
+                  {{classTime}}
+                </view>
+                <view class="bigX">
+                  <image src="/images/bigX.png" style="width: 80%; height: 30px;"/>
+                </view>
+                <block wx:if="{{i < favourites[id].classTime[1].length}}">
+                  <view class="bigX">
+                    <image src="/images/bigX.png" style="width: 80%; height: 30px;"/>
+                  </view>
+                </block>
+              </view>
+            </block>
+          </block>
+          <!-- copy and paste the above codes -->
+          <block wx:else>
+            second is longer
+            <block wx:for="{{favourites[id].classTime[1]}}" wx:for-item="classTime" wx:key="">
+              <view class="timeRow">
+                <view class="classTime">
+                  {{classTime}}
+                </view>
+              </view>
+            </block>
+          </block>
+        </block>
+        
       </view>
     </view>
   </block>

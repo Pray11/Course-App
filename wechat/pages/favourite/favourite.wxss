@@ -12,5 +12,22 @@
 }
 
 .courseTime {
-  font-style: italic;
+  /*font-style: italic;*/
+}
+
+.timeHeader {
+  display: flex;
+  flex-direction: row;
+}
+
+.timeText, .classTime {
+  width: 30%;
+}
+
+.bigX {
+  width: 30%;
+}
+
+.timeRow {
+  display: flex;
 }
