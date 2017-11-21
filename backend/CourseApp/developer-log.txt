@@ -1,0 +1,9 @@
+what are you going to do today?
+
+Remember to exercise your elbow from time to time, keep warm!
+
+Check out the unit tests, run them again
+
+implement clear, change the table name, separate it from production
+
+authentication process matters.
