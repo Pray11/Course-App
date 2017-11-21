@@ -1,5 +1,4 @@
 <!--pages/favourite/favourite.wxml-->
-{{getOne}}
 <view class="body">
   <block wx:for="{{favourites}}" wx:key="" wx:for-item="course" wx:for-index="id">
     <view class="course">
@@ -57,4 +56,23 @@
       </view>
     </view>
   </block>
+
+  <view class="conflict">
+    <block wx:if="{{conflicts.length > 0}}">
+      <view class="conflictHeader">
+        Time Conflicts:
+      </view>
+    </block>
+    <block wx:for="{{conflicts}}" wx:key="" wx:for-item="conflict"
+        wx:for-index="i">
+      <view class="conflictEntry">
+        <view class="conflictTitle">
+          {{i + 1}}. {{favourites[conflict.course1].name}} --- {{favourites[conflict.course2].name}}
+        </view>
+        <view class="conflictContent">
+          Time: {{conflict.conflictTime}}
+        </view>
+      </view>
+    </block>
+  </view>
 </view>

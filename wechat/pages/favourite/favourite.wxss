@@ -32,3 +32,24 @@
 .timeRow {
   display: flex;
 }
+
+.conflictHeader {
+  font-size: 24pt;
+}
+
+.conflictEntry {
+  width: 80%;
+}
+
+.conflictTitle {
+  font-size: 14pt;
+}
+
+.conflictContent {
+  font-size: 11pt;
+  margin-left: 10px;
+}
+
+.conflict {
+  margin-bottom: 100px;
+}
