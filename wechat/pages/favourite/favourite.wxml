@@ -1,0 +1,13 @@
+<!--pages/favourite/favourite.wxml-->
+<view class="body">
+  <block wx:for="{{favourites}}">
+    <view class="course">
+      <view class="courseName">
+        {{item.name}}
+      </view>
+      <view class="courseTime">
+        {{item.time}}
+      </view>
+    </view>
+  </block>
+</view>

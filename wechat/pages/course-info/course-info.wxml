@@ -1,0 +1,57 @@
+<!--pages/course-info/course-info.wxml-->
+<view>
+  <text>This is page for {{currentCourse.name}}</text>
+</view>
+<view>
+  <text>Course rating is: {{currentCourse.rating}}</text>
+</view>
+<view>
+  <text>Description: {{currentCourse.description}}</text>
+</view>
+<block wx:if="{{liked}}">
+  <view class="label">
+    Liked
+  </view>
+</block>
+<block wx:else>
+  <button bindtap='like'>Like This Course</button>
+</block>
+<view class="forum">
+  <view class="forumHeader">
+    <view class="forumTitle">
+      Forum
+    </view>
+    <view class="buttonArea">
+      <button class="concreteButton">New</button>
+    </view>
+  </view>
+
+  <view class="forumBody">
+    <view class="forumEntry">
+      <view class="entryHeader">
+        <view class="entryTitle">
+          Comment #2
+        </view>
+        <view class="entryTime">
+          2017-11-7
+        </view>
+      </view>
+      <view class="entryBody">
+        This is my viry first comment, I feel excited about this app!!
+      </view>
+    </view>
+    <view class="forumEntry">
+      <view class="entryHeader">
+        <view class="entryTitle">
+          Comment #1
+        </view>
+        <view class="entryTime">
+          2017-11-5
+        </view>
+      </view>
+      <view class="entryBody">
+        Developers! Please hit me up!
+      </view>
+    </view>
+  </view>
+</view>

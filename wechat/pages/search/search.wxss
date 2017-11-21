@@ -1,0 +1,98 @@
+.weui-panel {
+  background-color: #FFFFFF;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.weui-panel:first-child {
+  margin-top: 0;
+}
+.weui-panel:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #E5E5E5;
+  color: #E5E5E5;
+}
+.weui-panel:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1rpx solid #E5E5E5;
+  color: #E5E5E5;
+}
+.weui-search-bar {
+  position: relative;
+  padding: 8px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #EFEFF4;
+  border-top: 1rpx solid #D7D6DC;
+  border-bottom: 1rpx solid #D7D6DC;
+}
+.weui-search-bar__form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+          flex: auto;
+  border-radius: 5px;
+  background: #FFFFFF;
+  border: 1rpx solid #E6E6EA;
+}
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+.weui-search-bar__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+.weui-icon-clear {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 7px 8px;
+  font-size: 0;
+}
+weui-search-bar__label
+.weui-search-bar__cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  color: #09BB07;
+  white-space: nowrap;
+}
+.weui-search-bar__text {
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.c-minheight {
+        min-height: 60px;
+}
+.c-block {
+        display: block;
+}
+.wx-view_movilelist_item{padding: 10px; border-style: solid; border-bottom-width: 1px; border-bottom-color: rgb(153, 153, 153); border-bottom-style: none; border-top-style: none; border-right-style: none; border-left-style: none; }
+.wx-navigator_movielist_item{border-style: none none solid; border-bottom-width: 1px; border-bottom-color: rgba(170,170,170,1); }
+.wx-image_movielist_item_cover{width: 80px; height: 112px; float: left; }
+.wx-view_6zMKSh{margin-left: 95px; height: 112px; }
+.wx-image_movielist_item_title{margin-bottom: 5px; font-size: 16px; }
+.wx-image_movielist_item_actors{color: rgb(153, 153, 153); font-size: 13px; line-height: 1.5em; }

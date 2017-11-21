@@ -1,0 +1,36 @@
+/**index.wxss**/
+
+.buttonSearch{
+width:100px;
+ font-family:Microsoft YaHei;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+   margin-top:30px
+}
+
+.buttonSurvey{
+  width:100px;
+  font-family:Microsoft YaHei;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top:30px
+}
+
+.text{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-family:Microsoft YaHei;
+   font-size:20px;
+   
+}
+.distance{
+  padding:120px 60px;
+}
+
+
+
+

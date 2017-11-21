@@ -1,0 +1,27 @@
+<view class="weui-panel">
+       <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        </view>
+        <navigator bindtap="bindViewTap4" class="wx-navigator_movielist_item"  id="wx_navigator_46b77b4d" hover-class="navigator-hover" url="../detail/detail">
+        <view class="c-minheight wx-view_movilelist_item" >
+            <image class="wx-image_movielist_item_cover"   mode="scaleToFill" src="http://pic.lvmama.com//uploads/pc/place2/2017-05-25/a33272f0-69bc-4037-ae5d-fe0a21e8c9ce_180_120.jpg" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat; "/>
+            <view class="c-minheight wx-view_6zMKSh">
+                <text class="c-block wx-image_movielist_item_title" >CourseA</text>
+                <text class="c-block wx-image_movielist_item_actors">lectuer</text>
+                 <text class="c-block wx-image_movielist_item_actors">information1</text>
+                  <text class="c-block wx-image_movielist_item_actors">information2</text>
+            </view>
+        </view>
+</navigator>
+
+

@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view>
+<view class="distance">
+<text class="text">搜索一些你感兴趣的课!</text>
+<button class="buttonSearch" bindtap="ToSearch">搜索</button>
+</view>
+<view>
+<text class="text">测试你可能你感兴趣的课!</text>
+<button class="buttonSurvey" bindtap="ToSurvey">测试</button>
+</view>
+<view class="distance">
+<text class="text">评价你上过的课!</text>
+<button class="buttonSearch" bindtap="ToRate">评价</button>
+</view>
+</view>

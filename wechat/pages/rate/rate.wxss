@@ -1,0 +1,13 @@
+/* pages/rate/rate.wxss */
+.c-minheight {
+        min-height: 60px;
+}
+.c-block {
+        display: block;
+}
+.wx-view_movilelist_item{padding: 10px; border-style: solid; border-bottom-width: 1px; border-bottom-color: rgb(153, 153, 153); border-bottom-style: none; border-top-style: none; border-right-style: none; border-left-style: none; }
+.wx-navigator_movielist_item{border-style: none none solid; border-bottom-width: 1px; border-bottom-color: rgba(170,170,170,1); }
+.wx-image_movielist_item_cover{width: 80px; height: 112px; float: left; }
+.wx-view_6zMKSh{margin-left: 95px; height: 112px; }
+.wx-image_movielist_item_title{margin-bottom: 5px; font-size: 16px; }
+.wx-image_movielist_item_actors{color: rgb(153, 153, 153); font-size: 13px; line-height: 1.5em; }
