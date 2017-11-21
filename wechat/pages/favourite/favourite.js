@@ -69,17 +69,25 @@ Page({
           timeTable.push(aRow);
         }
         favourites[i].timeTable = timeTable;
-        // // set for the first weekday, Tuesday
-        // for (var j = 0; j < favourites[i].classTime[0].length; j++) {
-
-        // }
-        // timeTableEntry.push(favourites[i].classTime[biggerIndex]);
       }
     }
     this.setData({
       favourites: favourites
     })
     console.log(favourites);
+    this.findConflicts();
+  },
+
+  findConflicts: function() {
+    // STEP 1, find all the slots
+    var maxColumns = 0;
+    var favourites = this.data.favourites;
+    for (var i = 0; i < favourites.length; i++) {
+      numberOfColumns = favourites[i].weekTime.length;
+      // TODO 
+    }
+    // STEP 2, find if there is any conflict in this slot, record it
+    // STEP 3, render it using wxml
   },
 
   /**
