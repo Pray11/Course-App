@@ -1,4 +1,4 @@
-package edu.zjgsu.CourseApp.servlet;
+package edu.zjgsu.courseapp.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import edu.zjgsu.CourseApp.bean.StudentAttendedCoursesBean;
-import edu.zjgsu.CourseApp.service.StudentAttendedCoursesService;
-import edu.zjgsu.CourseApp.service.impl.StudentAttendedCoursesServiceImpl;
+import edu.zjgsu.courseapp.bean.StudentAttendedCoursesBean;
+import edu.zjgsu.courseapp.service.StudentAttendedCoursesService;
+import edu.zjgsu.courseapp.service.impl.StudentAttendedCoursesServiceImpl;
 
 /**
  * Servlet implementation class CourseRateServlet

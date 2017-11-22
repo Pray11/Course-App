@@ -1,4 +1,4 @@
-package edu.zjgsu.CourseApp.dao;
+package edu.zjgsu.courseapp.dao;
 
 import java.util.List;
 

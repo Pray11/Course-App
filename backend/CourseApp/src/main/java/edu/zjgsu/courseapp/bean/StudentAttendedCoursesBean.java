@@ -1,4 +1,4 @@
-package edu.zjgsu.CourseApp.bean;
+package edu.zjgsu.courseapp.bean;
 
 public class StudentAttendedCoursesBean {
 	private String student_id;

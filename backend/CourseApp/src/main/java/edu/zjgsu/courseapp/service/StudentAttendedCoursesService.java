@@ -1,8 +1,8 @@
-package edu.zjgsu.CourseApp.service;
+package edu.zjgsu.courseapp.service;
 
 import java.util.List;
 
-import edu.zjgsu.CourseApp.bean.StudentAttendedCoursesBean;
+import edu.zjgsu.courseapp.bean.StudentAttendedCoursesBean;
 
 public interface StudentAttendedCoursesService {
 	List<StudentAttendedCoursesBean> searchCourseRate(String courseId, String studentId);

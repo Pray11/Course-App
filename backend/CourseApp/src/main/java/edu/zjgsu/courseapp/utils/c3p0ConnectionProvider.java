@@ -1,4 +1,4 @@
-package edu.zjgsu.CourseApp.utils;
+package edu.zjgsu.courseapp.utils;
 
 import java.beans.PropertyVetoException;
 import java.sql.Connection;

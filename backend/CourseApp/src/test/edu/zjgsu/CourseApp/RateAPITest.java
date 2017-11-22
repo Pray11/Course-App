@@ -1,4 +1,4 @@
-package edu.zjgsu.CourseApp;
+package edu.zjgsu.courseapp;
 
 import org.apache.log4j.Logger;
 

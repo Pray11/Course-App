@@ -1,9 +1,9 @@
-package edu.zjgsu.CourseApp.dao.impl;
+package edu.zjgsu.courseapp.dao.impl;
 
 import java.util.List;
 
-import edu.zjgsu.CourseApp.dao.BaseDao;
-import edu.zjgsu.CourseApp.utils.DBHelper;
+import edu.zjgsu.courseapp.dao.BaseDao;
+import edu.zjgsu.courseapp.utils.DBHelper;
 
 public class BaseDaoImpl implements BaseDao{
 	private DBHelper db = new DBHelper();

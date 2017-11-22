@@ -1,14 +1,14 @@
-package edu.zjgsu.CourseApp.service.impl;
+package edu.zjgsu.courseapp.service.impl;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import edu.zjgsu.CourseApp.bean.StudentAttendedCoursesBean;
-import edu.zjgsu.CourseApp.dao.BaseDao;
-import edu.zjgsu.CourseApp.dao.impl.BaseDaoImpl;
-import edu.zjgsu.CourseApp.service.StudentAttendedCoursesService;
+import edu.zjgsu.courseapp.bean.StudentAttendedCoursesBean;
+import edu.zjgsu.courseapp.dao.BaseDao;
+import edu.zjgsu.courseapp.dao.impl.BaseDaoImpl;
+import edu.zjgsu.courseapp.service.StudentAttendedCoursesService;
 
 public class StudentAttendedCoursesServiceImpl implements StudentAttendedCoursesService{
 

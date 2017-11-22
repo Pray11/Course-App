@@ -10,7 +10,7 @@
   
   <servlet>
     <servlet-name>CourseRateServlet</servlet-name>
-    <servlet-class>edu.zjgsu.CourseApp.servlet.CourseRateServlet</servlet-class>
+    <servlet-class>edu.zjgsu.courseapp.servlet.CourseRateServlet</servlet-class>
   </servlet>
  
   <servlet-mapping>
