@@ -3,19 +3,47 @@
   <description>
 		A web application for better course management.
 	</description>
+<<<<<<< HEAD
   <context-param>
     <param-name>webmaster</param-name>
     <param-value>puzhenq@qq.com</param-value>
   </context-param>
   
-  <servlet>
-    <servlet-name>CourseRateServlet</servlet-name>
-    <servlet-class>edu.zjgsu.courseapp.servlet.CourseRateServlet</servlet-class>
-  </servlet>
- 
-  <servlet-mapping>
-    <servlet-name>CourseRateServlet</servlet-name>
-    <url-pattern>/rate</url-pattern>
-  </servlet-mapping>
+
   
+=======
+	<context-param>
+		<param-name>webmaster</param-name>
+		<param-value>puzhenq@qq.com</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>Json</servlet-name>
+		<servlet-class>edu.zjgsu.courseapp.servlet.JsonServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+    	<servlet-name>CourseRateServlet</servlet-name>
+    	<servlet-class>edu.zjgsu.courseapp.servlet.CourseRateServlet</servlet-class>
+  	</servlet>
+ 
+  	<servlet-mapping>
+    	<servlet-name>CourseRateServlet</servlet-name>
+    	<url-pattern>/rate</url-pattern>
+  	</servlet-mapping>
+
+    <servlet>
+        <servlet-name>Forum</servlet-name>
+        <servlet-class>edu.zjgsu.courseapp.servlet.ForumServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Forum</servlet-name>
+        <url-pattern>/forum</url-pattern>
+    </servlet-mapping>
+
+	<<servlet-mapping>
+		<!--<servlet-name>Json</servlet-name>-->
+		<!--<url-pattern>/json</url-pattern>-->
+	</servlet-mapping>
 </web-app>

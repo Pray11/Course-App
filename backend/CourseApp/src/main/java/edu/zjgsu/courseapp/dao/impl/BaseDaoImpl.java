@@ -22,3 +22,4 @@ public class BaseDaoImpl implements BaseDao{
         return db.update(sql, params);
     }
 }
+
