@@ -8,3 +8,5 @@
 2017-11-22 11:19:32 INFO  RateAPITest:22 - Using url-starter: http://localhost:8080/WebApp_ID
 2017-11-22 11:21:46 INFO  RateAPITest:22 - Using url-starter: http://localhost:8080/WebApp_ID
 2017-11-22 11:32:34 INFO  RateAPITest:22 - Using url-starter: http://localhost:8080/WebApp_ID
+2017-11-22 12:02:57 INFO  RateAPITest:22 - Rate API Test is using url-starter: http://localhost:8080/interaction
+2017-11-22 12:03:25 INFO  RateAPITest:22 - Rate API Test is using url-starter: http://localhost:8080/interaction
